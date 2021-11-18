@@ -21,7 +21,7 @@ class TwigEventSubscriber implements EventSubscriberInterface
 
     public function onKernelController(ControllerEvent $event)
     {
-        $this->twig->addGlobal('conference', $this->conferenceRepository->findAll());
+        $this->twig->addGlobal('conferences', $this->conferenceRepository->findAll());
     }
 
     public static function getSubscribedEvents()
